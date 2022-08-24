@@ -13,8 +13,7 @@ export class VeiculoCreateComponent implements OnInit {
 
   marcas: VeiculoMarca[] = [
     {value: 'AUDI',viewValue: 'Audi'},
-    {value:'HONDA', viewValue: 'Honda'}
-
+    {value:'HONDA', viewValue: 'Honda'},
   ]
 
   veiculo: Veiculo = {
@@ -50,9 +49,4 @@ export class VeiculoCreateComponent implements OnInit {
   cancel(): void{
     this.router.navigate(['/veiculos'])
   }
-
-  onChange(eventValue:any) {
-    console.log(eventValue);
-}
-
 }

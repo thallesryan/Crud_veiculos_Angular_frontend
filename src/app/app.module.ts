@@ -22,6 +22,12 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule} from '@angular/material/input'
 import {MatSelectModule} from '@angular/material/select';
+import { VeiculoReadComponent } from './components/veiculo/veiculo-read/veiculo-read.component';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { VeiculoUpdateComponent } from './components/veiculo/veiculo-update/veiculo-update.component';
 
 
 @NgModule({
@@ -32,7 +38,9 @@ import {MatSelectModule} from '@angular/material/select';
     NavComponent,
     HomeComponent,
     VeiculoCrudComponent,
-    VeiculoCreateComponent
+    VeiculoCreateComponent,
+    VeiculoReadComponent,
+    VeiculoUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +56,10 @@ import {MatSelectModule} from '@angular/material/select';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

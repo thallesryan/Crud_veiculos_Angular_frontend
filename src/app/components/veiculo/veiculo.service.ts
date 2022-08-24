@@ -26,5 +26,18 @@ export class VeiculoService {
     return this.http.post<Veiculo>(this.baseUrl, veiculo)
   }
 
+  read(): Observable<Veiculo[]> {
+    return this.http.get<Veiculo[]>(this.baseUrl)
+  }
+
+  readById(id: number): Observable<Veiculo>{
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Veiculo>(url);
+  }
+  update(veiculo: Veiculo): Observable<Veiculo> {
+    const url = `${this.baseUrl}/${veiculo.id}`
+    return this.http.put<Veiculo>(url, veiculo);
+  }
+
 
 }
