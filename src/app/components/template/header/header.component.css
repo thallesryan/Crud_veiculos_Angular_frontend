@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+ 
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    height: 5rem;
+    
+}
+
+ 
+.header .title-group i {
+    padding-right: 5px ;
+}
+
+mat-toolbar{
+    background-color: rgb(49, 49, 51);
+}

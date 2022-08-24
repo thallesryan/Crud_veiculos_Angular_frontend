@@ -1,0 +1,28 @@
+.home .title{
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: white;
+    text-align: center;
+}
+.home .subtitle{
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+}
+.home{
+    background-color: blue;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}
+
+button{
+    margin-left: 10px;
+    
+}
