@@ -28,6 +28,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { VeiculoUpdateComponent } from './components/veiculo/veiculo-update/veiculo-update.component';
+import { VeiculoDeleteComponent } from './components/veiculo/veiculo-delete/veiculo-delete.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -40,7 +42,8 @@ import { VeiculoUpdateComponent } from './components/veiculo/veiculo-update/veic
     VeiculoCrudComponent,
     VeiculoCreateComponent,
     VeiculoReadComponent,
-    VeiculoUpdateComponent
+    VeiculoUpdateComponent,
+    VeiculoDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,10 @@ import { VeiculoUpdateComponent } from './components/veiculo/veiculo-update/veic
     MatSelectModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    NgxMaskModule.forRoot(
+      {dropSpecialCharacters: false}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

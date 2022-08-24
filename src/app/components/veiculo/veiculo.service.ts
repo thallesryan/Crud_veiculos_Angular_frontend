@@ -18,7 +18,8 @@ export class VeiculoService {
     this.snackBar.open(msg, 'X', {
       duration:3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      
     })
   }
 
@@ -37,6 +38,11 @@ export class VeiculoService {
   update(veiculo: Veiculo): Observable<Veiculo> {
     const url = `${this.baseUrl}/${veiculo.id}`
     return this.http.put<Veiculo>(url, veiculo);
+  }
+
+  delete(id: number): Observable<Veiculo>{
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Veiculo>(url);
   }
 
 

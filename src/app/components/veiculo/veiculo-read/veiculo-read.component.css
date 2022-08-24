@@ -10,3 +10,11 @@ table > ng-container > th td{
 button{
     padding: 10px;
 }
+
+.delete > i{
+    color: black;
+}
+ 
+.edit {
+    color: black;
+}

@@ -2,15 +2,15 @@
     <mat-card-title>Novo Veiculo</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Placa" [(ngModel)]="veiculo.placa" name="placa">
+            <input matInput placeholder="Placa" [(ngModel)]="veiculo.placa" name="placa" mask="AAAAAAA">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Chassi" [(ngModel)]="veiculo.chassi" name="Chassi">
+            <input matInput placeholder="Chassi" [(ngModel)]="veiculo.chassi" name="Chassi" mask="0UUUUUUUUUU000000">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Renavam" [(ngModel)]="veiculo.renavam" name="renavam">
+            <input matInput placeholder="Renavam" [(ngModel)]="veiculo.renavam" name="renavam" mask="00000000">
         </mat-form-field>
         
         
@@ -26,7 +26,7 @@
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Ano" [(ngModel)]="veiculo.ano" name="ano">
+            <input matInput placeholder="Ano" [(ngModel)]="veiculo.ano" name="ano" mask="0000">
         </mat-form-field>
 
     </form>

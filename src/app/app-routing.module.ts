@@ -1,3 +1,4 @@
+import { VeiculoDeleteComponent } from './components/veiculo/veiculo-delete/veiculo-delete.component';
 import { VeiculoUpdateComponent } from './components/veiculo/veiculo-update/veiculo-update.component';
 import { VeiculoCreateComponent } from './components/veiculo/veiculo-create/veiculo-create.component';
 import { NgModule } from '@angular/core';
@@ -23,7 +24,12 @@ const routes: Routes = [
   {
     path:"veiculos/update/:id",
     component: VeiculoUpdateComponent
+  },
+  {
+    path:"veiculos/delete/:id",
+    component: VeiculoDeleteComponent
   }
+
 
 
 
