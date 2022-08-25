@@ -22,3 +22,11 @@ button{
 .pdf{
    cursor: pointer;
 }
+
+h1{
+    text-align: center;
+    margin-top: 2px;
+    padding-top: 2px;
+    color: blue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
