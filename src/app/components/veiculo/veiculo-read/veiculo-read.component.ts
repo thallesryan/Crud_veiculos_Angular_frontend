@@ -13,6 +13,7 @@ export class VeiculoReadComponent implements OnInit {
 
   displayedColumns=['id','placa', 'chassi', 'renavam', 'modelo','marca','ano', 'acoes']
 
+
  
   constructor(private service: VeiculoService) { }
  
@@ -23,5 +24,15 @@ export class VeiculoReadComponent implements OnInit {
     })
   }
 
-
+  createPdf(id:number):void{
+    this.service.downlaodPdf(id).subscribe( res =>{
+      let url = window.URL.createObjectURL(res);
+      let a = document.createElement('a');
+      a.href = url;
+      a.download = "Download pdf";
+      a.click();
+      window.URL.revokeObjectURL(url);
+      a.remove();
+    })
+  }
 }

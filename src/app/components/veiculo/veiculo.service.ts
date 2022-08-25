@@ -1,5 +1,5 @@
 import { Veiculo } from './../Veiculo';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
@@ -45,5 +45,17 @@ export class VeiculoService {
     return this.http.delete<Veiculo>(url);
   }
 
+  /*
+  gerarPDF(id: number): Observable<Veiculo>{
+    const url = `${this.baseUrl}/pdf/${id}`
+    return this.http.get<Veiculo>(url);
+  }*/
+
+  downlaodPdf(id: number){
+    let headers = new HttpHeaders();
+    headers = headers.set('accept', 'application/pdf')
+    const url = `${this.baseUrl}/pdf/${id}`
+    return this.http.get(url, {headers:headers, responseType:'blob'})
+  }
 
 }
