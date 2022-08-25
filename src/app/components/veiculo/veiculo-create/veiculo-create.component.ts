@@ -17,7 +17,7 @@ export class VeiculoCreateComponent implements OnInit {
   ]
 
   veiculo: Veiculo = {
-    placa: ' ', 
+    placa: '', 
     chassi:' ', 
     renavam:' ', 
     modelo: '',
