@@ -18,3 +18,7 @@ button{
 .edit {
     color: black;
 }
+
+.pdf{
+   cursor: pointer;
+}
